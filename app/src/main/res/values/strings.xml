@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Torino</string>
+
+    <!-- Layout del main -->
+    <string name="boton_iniciar_sesion">Iniciar sesión</string>
+    <string name="boton_crear_cuenta">Crear cuenta</string>
 </resources>
