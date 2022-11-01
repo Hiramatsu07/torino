@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.torino.activities.MainActivity"
+    tools:context="com.example.torino.activities.LoginActivity"
     android:gravity="center_horizontal"
     android:orientation="vertical">
     <Button
@@ -23,4 +23,28 @@
         android:text="@string/boton_iniciar_sesion"
         android:id="@+id/inicio_iniciar_sesion"
         android:onClick="lanzarLogin"/>
+    <EditText
+        android:id="@+id/nombre_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:hint="@string/prompt_correo_electronico"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/contrasenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:hint="@string/prompt_contrasenha"
+        android:imeActionId="@+id/login"
+        android:imeActionLabel="@string/action_boton_iniciar_sesion"
+        android:imeOptions="actionUnspecified"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:singleLine="true" />
 </LinearLayout>

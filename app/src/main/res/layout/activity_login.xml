@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="161dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/k2d_regular"
+            android:gravity="center_vertical"
+            android:text="@string/titulo_login"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="244dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_torino" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/k2d_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/texto_explicacion_login"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="32dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/redondear_boton"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/k2d_regular"
+            android:onClick="lanzarCrearCuenta"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="@string/boton_crear_cuenta"
+            app:backgroundTint="#000000" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/redondear_boton"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/k2d_regular"
+            android:onClick="lanzarLogin"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="@string/action_boton_iniciar_sesion"
+            app:backgroundTint="#000000" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/k2d_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/texto_derechos_autor"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+</ScrollView>

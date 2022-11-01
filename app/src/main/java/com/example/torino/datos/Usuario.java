@@ -3,14 +3,14 @@ package com.example.torino.datos;
 import java.util.ArrayList;
 
 public class Usuario {
-    private String nickname;
-    private String nombreUsuario;
+    private final String nickname;
+    private final String nombreUsuario;
     private String mail;
     private String password;
-    private String telefono;
+    private final String telefono;
 
     private static Usuario usuarioLogueado;
-    private static ArrayList<Usuario> usuarios;
+    private static final ArrayList<Usuario> usuarios;
 
     static {
         usuarios = new ArrayList<>();

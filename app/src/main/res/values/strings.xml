@@ -4,4 +4,13 @@
     <!-- Layout del main -->
     <string name="boton_iniciar_sesion">Iniciar sesión</string>
     <string name="boton_crear_cuenta">Crear cuenta</string>
+    <string name="texto_derechos_autor">Todos los derechos reservados a TORINO©</string>
+
+    <!-- Layout del login -->
+    <string name="titulo_login">Bienvenido a TORINO</string>
+    <string name="texto_explicacion_login">Inicia sesión y empieza a compartir ¡SIN RODEOS! O bien puedes iniciar sesión si ya tienes una cuenta previa</string>
+    <string name="prompt_correo_electronico">Correo electrónico</string>
+    <string name="prompt_contrasenha">Contraseña</string>
+    <string name="action_boton_iniciar_sesion">INICIAR SESION</string>
+    <string name="link_contrasenha_olvidada">¿Ha olvidado su contraseña?</string>
 </resources>
