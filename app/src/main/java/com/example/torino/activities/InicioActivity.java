@@ -39,6 +39,7 @@ public class InicioActivity extends AppCompatActivity {
                 if (estaComprobado) {
                     Log.i(TAG, "Credenciales correctas");
                     setUsuarioLogueado();
+                    desplegarMensajeCredencialesCorrectas();
                     Intent intentFeed = new Intent( view.getContext(), EditarPerfilActivity.class );
                     startActivity( intentFeed );
                 } else {
@@ -52,8 +53,11 @@ public class InicioActivity extends AppCompatActivity {
     }
 
     public void desplegarMensajeCredencialesIncorrectas() {
-        new AlertDialog.Builder(this)                 .setTitle("Credenciales incorrectas:")    .setMessage("Ingrese usuario y contraseña").setPositiveButton("Ok", null) .show();
         Toast.makeText(getApplicationContext(), "Credenciales incorrectas", Toast.LENGTH_SHORT)
+                .show();
+    }
+    public void desplegarMensajeCredencialesCorrectas() {
+        Toast.makeText(getApplicationContext(), "Sesión iniciada correctamente", Toast.LENGTH_SHORT)
                 .show();
     }
 
