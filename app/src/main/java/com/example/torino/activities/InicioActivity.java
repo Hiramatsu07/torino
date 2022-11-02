@@ -23,34 +23,31 @@ public class InicioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: Inicia la creacion de la ctividad");
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_inicio);
         login = findViewById(R.id.button_login);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 campoEmail = (EditText) findViewById(R.id.email);
                 campoPassword = (EditText) findViewById(R.id.password);
-                iniciarSesion(view);
+
+                String email = campoEmail.getText().toString();
+                String password = campoPassword.getText().toString();
+
+                boolean estaComprobado = Usuario.comprobarCredenciales(email, password);
+
+                if (estaComprobado) {
+                    Log.i(TAG, "Credenciales correctas");
+                    setUsuarioLogueado();
+                    Intent intentFeed = new Intent( view.getContext(), EditarPerfilActivity.class );
+                    startActivity( intentFeed );
+                } else {
+                    Log.i(TAG, "Las credenciales son incorrectas");
+                    desplegarMensajeCredencialesIncorrectas();
+                }
+
             }
         });
-
-    }
-
-    public void iniciarSesion(View view) {
-        String email = campoEmail.getText().toString();
-        String password = campoPassword.getText().toString();
-
-        boolean estaComprobado = Usuario.comprobarCredenciales(email, password);
-
-        if (estaComprobado) {
-            Log.i(TAG, "Credenciales correctas");
-            setUsuarioLogueado();
-            Intent intentFeed = new Intent( this, FeedActivity.class );
-            startActivity( intentFeed );
-        } else {
-            Log.i(TAG, "Las credenciales son incorrectas");
-            desplegarMensajeCredencialesIncorrectas();
-        }
 
     }
 

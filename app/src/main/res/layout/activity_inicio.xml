@@ -64,7 +64,7 @@
         android:layout_marginTop="25dp"
         android:fontFamily="@font/k2d_regular"
         android:hint="@string/text_input_password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:maxLines="1"
         android:singleLine="true"
         android:textColor="#000000"

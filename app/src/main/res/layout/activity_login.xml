@@ -55,14 +55,18 @@
         android:background="@drawable/redondear_boton"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/k2d_regular"
-        android:onClick="lanzarCrearCuenta"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         android:text="@string/boton_crear_cuenta"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:backgroundTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descripcion" />
+        app:layout_constraintTop_toBottomOf="@id/descripcion"
+        app:rippleColor="#FFFFFF" />
 
     <Button
         android:id="@+id/button_login"
@@ -73,14 +77,18 @@
         android:background="@drawable/redondear_boton"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/k2d_regular"
-        android:onClick="lanzarLogin"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         android:text="@string/boton_iniciar_sesion"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:backgroundTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_crear" />
+        app:layout_constraintTop_toBottomOf="@id/button_crear"
+        app:rippleColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/copyright"
@@ -89,7 +97,6 @@
         android:layout_gravity="right"
         android:layout_marginRight="10dp"
         android:fontFamily="@font/k2d_regular"
-
         android:gravity="center_horizontal"
         android:text="@string/texto_derechos_autor"
         android:textAppearance="?android:attr/textAppearanceSmall"

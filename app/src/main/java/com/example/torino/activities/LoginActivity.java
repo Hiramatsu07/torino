@@ -5,28 +5,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.torino.R;
 
 public class LoginActivity extends AppCompatActivity {
+    Button login;
+    Button crear_cuenta;
     @Override
     protected void onCreate (Bundle savedInstanceState){
-    super.onCreate(savedInstanceState);
-    requestWindowFeature(Window.FEATURE_NO_TITLE);
-    this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-    getSupportActionBar().hide();
-    setContentView(R.layout.activity_inicio);
-    }
-    public void lanzarCrearCuenta(View view){
-        Intent intentCrearCuenta = new Intent( this, CrearCuentaActivity.class );
-        startActivity( intentCrearCuenta );
-    }
+        setContentView(R.layout.activity_login);
+        login = findViewById(R.id.button_login);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLogin = new Intent( view.getContext(), InicioActivity.class );
+                startActivity( intentLogin );
+            }
+        });
+        super.onCreate(savedInstanceState);
 
-    public void lanzarLogin(View view){
-        Intent intentLogin = new Intent( this, InicioActivity.class );
-        startActivity( intentLogin );
+        crear_cuenta = findViewById(R.id.button_crear);
+        crear_cuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentCrearCuenta = new Intent(view.getContext(), CrearCuentaActivity.class );
+                startActivity( intentCrearCuenta );
+            }
+        });
+
     }
 }
 

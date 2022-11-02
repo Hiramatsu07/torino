@@ -14,7 +14,7 @@ public class Usuario {
 
     static {
         usuarios = new ArrayList<>();
-        usuarios.add( new Usuario("batman", "Bruce Wine", "batman@ciudadgotica.com", "batman", "0900123123"));
+        usuarios.add( new Usuario("batman", "Bruce Wine", "h", "h", "0900123123"));
     }
 
     public Usuario(String nickname, String nombreApellido, String mail, String password,
