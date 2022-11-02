@@ -74,8 +74,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email" />
 
+    <EditText
+        android:id="@+id/nickname"
+        android:layout_width="359dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/k2d_regular"
+        android:hint="@string/text_input_nickname"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/button_crear_cuenta"
         android:layout_width="185dp"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
@@ -85,38 +103,22 @@
         android:fontFamily="@font/k2d_regular"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        android:text="@string/boton_iniciar_sesion"
+        android:text="@string/boton_crear_cuenta"
         app:backgroundTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password" />
+        app:layout_constraintTop_toBottomOf="@id/nickname" />
+
 
     <TextView
-        android:id="@+id/link_password_forget"
+        android:id="@+id/link_iniciar_sesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/k2d_regular"
         android:gravity="center"
-        android:text="@string/link_password_forget"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_login" />
-
-    <TextView
-        android:id="@+id/link_crear_cuenta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/k2d_regular"
-        android:gravity="center"
-        android:text="@string/link_crear_cuenta"
+        android:text="@string/link_iniciar_sesion"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#7D0707"
         android:textColorHint="#000000"
@@ -124,7 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/link_password_forget" />
+        app:layout_constraintTop_toBottomOf="@id/button_crear_cuenta" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

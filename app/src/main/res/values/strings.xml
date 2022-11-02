@@ -2,13 +2,14 @@
     <string name="app_name">Torino</string>
 
     <!-- Layout del iniciar sesion -->
-    <string name="boton_texto_iniciar_sesion">Iniciar sesión</string>
-    <string name="boton_texto_crear_cuenta">Crear cuenta</string>
-    <string name="link_contrasenha_olvidada">¿Ha olvidado la contraseña?</string>
+    <string name="link_iniciar_sesion">Iniciar sesión</string>
+    <string name="link_crear_cuenta">Crear una cuenta</string>
+    <string name="link_password_forget">¿Ha olvidado la contraseña?</string>
     <string name ="slogan"> ¡Sin rodeos!</string>
     <string name = "titulo_torino"> TORINO </string>
-    <string name = "text_input_contraseña">Contraseña </string>
+    <string name = "text_input_password">Contraseña </string>
     <string name = "text_input_email">Email </string>
+    <string name = "text_input_nickname"> Nickname </string>
 
 
     <!-- Layout del login -->

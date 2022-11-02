@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -14,22 +15,29 @@ import com.example.torino.datos.Usuario;
 
 public class InicioActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
-    private EditText campoNombreUsuario;
+    private EditText campoEmail;
     private EditText campoPassword;
-
+    Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: Inicia la creacion de la ctividad");
         setContentView(R.layout.activity_login);
+        login = findViewById(R.id.button_login);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                campoEmail = (EditText) findViewById(R.id.email);
+                campoPassword = (EditText) findViewById(R.id.password);
+                iniciarSesion(view);
+            }
+        });
 
-        //campoNombreUsuario = (EditText) findViewById(R.id.nombre_usuario );
-        //campoPassword = (EditText) findViewById(R.id.contrasenha );
     }
 
     public void iniciarSesion(View view) {
-        String email = campoNombreUsuario.getText().toString();
+        String email = campoEmail.getText().toString();
         String password = campoPassword.getText().toString();
 
         boolean estaComprobado = Usuario.comprobarCredenciales(email, password);
@@ -53,7 +61,7 @@ public class InicioActivity extends AppCompatActivity {
     }
 
     private void setUsuarioLogueado() {
-        String email = campoNombreUsuario.getText().toString();
+        String email = campoEmail.getText().toString();
         Usuario.setUsuarioLogueado( Usuario.getUsuario( email ));
     }
 
