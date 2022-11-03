@@ -32,13 +32,13 @@
         />
 
     <TextView
-        android:id="@+id/titulo_nombre"
+        android:id="@+id/titulo_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:fontFamily="@font/k2d_regular"
         android:gravity="left"
-        android:text="@string/titulo_nombre"
+        android:text="@string/titulo_email"
         android:textColor="#000000"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo_nombre" />
+        app:layout_constraintTop_toBottomOf="@id/titulo_email" />
 
     <TextView
         android:id="@+id/titulo_nickname"

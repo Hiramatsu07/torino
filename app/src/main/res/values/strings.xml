@@ -19,7 +19,7 @@
     <string name="boton_crear_cuenta">CREAR CUENTA</string>
     <string name="texto_derechos_autor">Todos los derechos reservados a TORINO©</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="titulo_nombre">Nombre</string>
+    <string name="titulo_email">Correo</string>
     <string name="titulo_nickname">Nickname</string>
     <string name="boton_guardar">GUARDAR</string>
 

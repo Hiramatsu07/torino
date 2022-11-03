@@ -3,7 +3,7 @@ package com.example.torino.datos;
 import java.util.ArrayList;
 
 public class Usuario {
-    private final String nickname;
+    private String nickname;
     private String mail;
     private String password;
 
@@ -43,6 +43,7 @@ public class Usuario {
         return usuarioLogueado;
     }
 
+
     public static Usuario getUsuario(String email) {
         for (Usuario usuario : usuarios) {
             if (email.equals(usuario.getMail())) {
@@ -61,6 +62,18 @@ public class Usuario {
             }
         }
         return true;
+    }
+
+
+    public static Usuario usuarioExiste(String email){
+        for (Usuario usuario : usuarios) {
+            if (email.equals(usuario.getMail())){
+                return usuario;
+            } else {
+                return null;
+            }
+        }
+        return null;
     }
 
     public String getMail() {
@@ -83,5 +96,7 @@ public class Usuario {
     public String getNickname() {
         return nickname;
     }
+
+    public void setNickname(){this.nickname = nickname; }
 }
 

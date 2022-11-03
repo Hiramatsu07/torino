@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.torino.R;
 
@@ -47,7 +48,8 @@ public class ThirdFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+    public EditText edit_text_nombre;
+    public EditText edit_text_nickname;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
