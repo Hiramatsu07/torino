@@ -21,5 +21,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="titulo_nombre">Nombre</string>
     <string name="titulo_nickname">Nickname</string>
+    <string name="boton_guardar">GUARDAR</string>
 
 </resources>

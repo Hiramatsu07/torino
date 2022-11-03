@@ -6,69 +6,83 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.ThirdFragment">
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
 
-
-    <TextView
-        android:id="@+id/titulo_torino"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="165dp"
-        android:fontFamily="@font/k2d_regular"
-        android:gravity="center"
-        android:includeFontPadding="false"
-        android:text="@string/titulo_torino"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="34sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/logo_torino"
+        android:layout_width="41dp"
+        android:layout_height="43dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo_torino"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
-    <TextView
-        android:id="@+id/slogan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-
-        android:fontFamily="@font/k2d_regular"
-        android:gravity="center"
-        android:text="@string/slogan"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textStyle="bold"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/foto_perfil"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:src="@drawable/foto_perfil"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo_torino" />
+        app:layout_constraintTop_toBottomOf="@id/logo_torino"
+
+        />
+
+    <TextView
+        android:id="@+id/titulo_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/k2d_regular"
+        android:gravity="left"
+        android:text="@string/titulo_nombre"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foto_perfil" />
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="357dp"
-        android:layout_height="50dp"
+        android:id="@+id/edit_text_nombre"
+        android:layout_width="345dp"
+        android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/k2d_regular"
-        android:hint="@string/text_input_email"
         android:inputType="text"
         android:maxLines="1"
         android:singleLine="true"
         android:textColor="#000000"
         android:textSize="15sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/slogan" />
+        app:layout_constraintTop_toBottomOf="@id/titulo_nombre" />
+
+    <TextView
+        android:id="@+id/titulo_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/k2d_regular"
+        android:layout_marginTop="10dp"
+        android:text="@string/titulo_nickname"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_nombre" />
 
     <EditText
-        android:id="@+id/password"
-        android:layout_width="359dp"
-        android:layout_height="48dp"
+        android:id="@+id/text_view_nombre"
+        android:layout_width="345dp"
+        android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/k2d_regular"
-        android:hint="@string/text_input_password"
-        android:inputType="textPassword"
         android:maxLines="1"
         android:singleLine="true"
         android:textColor="#000000"
@@ -76,57 +90,46 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email" />
+        app:layout_constraintTop_toBottomOf="@id/titulo_nickname"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button_login"
-        android:layout_width="185dp"
+        android:id="@+id/button_guardar_cambios"
+        android:layout_width="150dp"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="85dp"
         android:background="@drawable/redondear_boton"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/k2d_regular"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        android:text="@string/boton_iniciar_sesion"
+        android:text="@string/boton_guardar"
         app:backgroundTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password" />
+        app:layout_constraintTop_toBottomOf="@id/text_view_nombre" />
 
-    <TextView
-        android:id="@+id/link_password_forget"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/k2d_regular"
-        android:gravity="center"
-        android:text="@string/link_password_forget"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="16sp"
+    <RelativeLayout
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginRight="125dp"
+        android:background="@drawable/elevation"
+        android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_login" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/link_crear_cuenta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/k2d_regular"
-        android:gravity="center"
-        android:text="@string/link_crear_cuenta"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#7D0707"
-        android:textColorHint="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/link_password_forget" />
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/boton_redondo"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camara"
+            android:tint="#000000" />
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
