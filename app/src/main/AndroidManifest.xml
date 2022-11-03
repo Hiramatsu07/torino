@@ -24,6 +24,6 @@
         <activity android:name=".activities.MainActivity"/>
         <activity android:name=".activities.FeedActivity"/>
         <activity android:name=".activities.CrearCuentaActivity"/>
-        <activity android:name=".activities.EditarPerfilActivity"/>
+        <activity android:name=".activities.CargarFragmentosActivity"/>
     </application>
 </manifest>

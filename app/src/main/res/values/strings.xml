@@ -5,11 +5,11 @@
     <string name="link_iniciar_sesion">Iniciar sesión</string>
     <string name="link_crear_cuenta">Crear una cuenta</string>
     <string name="link_password_forget">¿Ha olvidado la contraseña?</string>
-    <string name ="slogan"> ¡Sin rodeos!</string>
-    <string name = "titulo_torino"> TORINO </string>
-    <string name = "text_input_password">Contraseña </string>
-    <string name = "text_input_email">Email </string>
-    <string name = "text_input_nickname"> Nickname </string>
+    <string name="slogan"> ¡Sin rodeos!</string>
+    <string name="titulo_torino"> TORINO </string>
+    <string name="text_input_password">Contraseña </string>
+    <string name="text_input_email">Email </string>
+    <string name="text_input_nickname"> Nickname </string>
 
 
     <!-- Layout del login -->
@@ -18,4 +18,8 @@
     <string name="boton_iniciar_sesion">INICIAR SESIÓN</string>
     <string name="boton_crear_cuenta">CREAR CUENTA</string>
     <string name="texto_derechos_autor">Todos los derechos reservados a TORINO©</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="titulo_nombre">Nombre</string>
+    <string name="titulo_nickname">Nickname</string>
+
 </resources>

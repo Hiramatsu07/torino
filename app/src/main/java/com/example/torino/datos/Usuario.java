@@ -10,34 +10,36 @@ public class Usuario {
     private final String telefono;
 
     private static Usuario usuarioLogueado;
-    private static final ArrayList<Usuario> usuarios;
+    public static final ArrayList<Usuario> usuarios;
 
     static {
         usuarios = new ArrayList<>();
-        usuarios.add( new Usuario("batman", "Bruce Wine", "h", "h", "0900123123"));
+        usuarios.add(new Usuario("batman", "Bruce Wine", "h", "h", "0900123123"));
     }
 
     public Usuario(String nickname, String nombreApellido, String mail, String password,
                    String telefono) {
         this.nickname = nickname;
-        this.nombreUsuario= nombreApellido;
+        this.nombreUsuario = nombreApellido;
         this.mail = mail;
         this.password = password;
         this.telefono = telefono;
     }
+
     public static boolean comprobarCredenciales(String email, String password) {
 
-        for( Usuario usuario : usuarios) {
-            if ( email.equals(usuario.getMail()) && password.equals(usuario.getPassword())){
+        for (Usuario usuario : usuarios) {
+            if (email.equals(usuario.getMail()) && password.equals(usuario.getPassword())) {
                 return true;
-            }else{
-                if ( email.equals("") && password.equals("")) {
+            } else {
+                if (email.equals("") && password.equals("")) {
                     return false;
                 }
             }
         }
         return false;
     }
+
     public static void setUsuarioLogueado(Usuario usuario) {
         usuarioLogueado = usuario;
     }
@@ -46,14 +48,26 @@ public class Usuario {
         return usuarioLogueado;
     }
 
-    public static Usuario getUsuario(String email ) {
-        for( Usuario usuario : usuarios) {
-            if ( email.equals(usuario.getMail()) ){
+    public static Usuario getUsuario(String email) {
+        for (Usuario usuario : usuarios) {
+            if (email.equals(usuario.getMail())) {
                 return usuario;
             }
         }
         return null;
     }
+
+    public static boolean existeCuenta(String email, String nickname) {
+        for (Usuario usuario : usuarios) {
+            if (email.equals(usuario.getMail()) || nickname.equals(usuario.getNickname())) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public String getMail() {
         return mail;
     }
@@ -66,8 +80,13 @@ public class Usuario {
         return password;
     }
 
+
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getNickname() {
+        return nickname;
     }
 }
 
