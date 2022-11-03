@@ -45,7 +45,7 @@ public class CrearCuentaActivity extends AppCompatActivity {
                     } else {
                         if (yaExiste == false) {
                             cuentaCreada();
-                            Usuario.usuarios.add(new Usuario(nickname, "", email, password, ""));
+                            Usuario.usuarios.add(new Usuario(nickname, email, password ));
                             finish();
                             Intent intentLogin = new Intent(view.getContext(), InicioActivity.class);
                             startActivity(intentLogin);

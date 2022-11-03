@@ -29,6 +29,7 @@ public class InicioActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 campoEmail = (EditText) findViewById(R.id.email);
                 campoPassword = (EditText) findViewById(R.id.password);
 

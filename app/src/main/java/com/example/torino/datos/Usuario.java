@@ -4,26 +4,21 @@ import java.util.ArrayList;
 
 public class Usuario {
     private final String nickname;
-    private final String nombreUsuario;
     private String mail;
     private String password;
-    private final String telefono;
 
     private static Usuario usuarioLogueado;
     public static final ArrayList<Usuario> usuarios;
 
     static {
         usuarios = new ArrayList<>();
-        usuarios.add(new Usuario("batman", "Bruce Wine", "h", "h", "0900123123"));
+        usuarios.add(new Usuario("Batman", "h", "h"));
     }
 
-    public Usuario(String nickname, String nombreApellido, String mail, String password,
-                   String telefono) {
+    public Usuario(String nickname, String mail, String password) {
         this.nickname = nickname;
-        this.nombreUsuario = nombreApellido;
         this.mail = mail;
         this.password = password;
-        this.telefono = telefono;
     }
 
     public static boolean comprobarCredenciales(String email, String password) {
