@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/firstFragement"
+        android:icon="@drawable/feed"
+        android:title=""/>
+    <item
+        android:id="@+id/secondFragement"
+        android:icon="@drawable/buscar"
+        android:title=""/>
+    <item
+        android:id="@+id/thirdFragement"
+        android:icon="@drawable/usuario"
+        android:title=""/>
+
+</menu>

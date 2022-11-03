@@ -1,12 +1,12 @@
 package com.example.torino.activities;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +18,8 @@ public class InicioActivity extends AppCompatActivity {
     private EditText campoEmail;
     private EditText campoPassword;
     Button login;
+    TextView crear_cuenta;
+    Usuario usuarioLogueado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class InicioActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 campoEmail = (EditText) findViewById(R.id.email);
                 campoPassword = (EditText) findViewById(R.id.password);
 
@@ -38,15 +41,27 @@ public class InicioActivity extends AppCompatActivity {
 
                 if (estaComprobado) {
                     Log.i(TAG, "Credenciales correctas");
+                    usuarioLogueado.setMail(email);
+
                     setUsuarioLogueado();
                     desplegarMensajeCredencialesCorrectas();
-                    Intent intentFeed = new Intent( view.getContext(), EditarPerfilActivity.class );
+                    Intent intentFeed = new Intent( view.getContext(), CargarFragmentosActivity.class );
                     startActivity( intentFeed );
                 } else {
                     Log.i(TAG, "Las credenciales son incorrectas");
                     desplegarMensajeCredencialesIncorrectas();
+
                 }
 
+            }
+        });
+        crear_cuenta = findViewById(R.id.link_crear_cuenta);
+        crear_cuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intentLogin = new Intent(view.getContext(), CrearCuentaActivity.class);
+                startActivity(intentLogin);
             }
         });
 
