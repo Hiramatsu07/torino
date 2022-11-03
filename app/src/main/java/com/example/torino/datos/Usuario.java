@@ -4,26 +4,28 @@ import java.util.ArrayList;
 
 public class Usuario {
     private final String nickname;
-    private final String nombreUsuario;
     private String mail;
     private String password;
-    private final String telefono;
+    private int id;
 
-    private static Usuario usuarioLogueado;
-    private static final ArrayList<Usuario> usuarios;
+    public ArrayList<Publicacion> publicaciones = new ArrayList<>();
+
+    public static Usuario usuarioLogueado;
+    public static final ArrayList<Usuario> usuarios;
 
     static {
         usuarios = new ArrayList<>();
-        usuarios.add( new Usuario("batman", "Bruce Wine", "h", "h", "0900123123"));
+        usuarios.add( new Usuario("Artur",  "artur", "1", 0));
+        usuarios.add( new Usuario("Martina",  "martina", "1", 1));
+        usuarios.add( new Usuario("Lara", "lara", "1",2));
     }
 
-    public Usuario(String nickname, String nombreApellido, String mail, String password,
-                   String telefono) {
+    public Usuario(String nickname,  String mail, String password,
+                    int id) {
         this.nickname = nickname;
-        this.nombreUsuario= nombreApellido;
         this.mail = mail;
         this.password = password;
-        this.telefono = telefono;
+        this.id = id;
     }
     public static boolean comprobarCredenciales(String email, String password) {
 
@@ -69,5 +71,27 @@ public class Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public ArrayList<Publicacion> getPublicaciones() {
+        return publicaciones;
+    }
+
+    public void setPublicaciones(ArrayList<Publicacion> publicaciones) {
+        this.publicaciones = publicaciones;
+    }
+
+    public void agregarPublicacion (Publicacion unaPublicacion){ publicaciones.add( unaPublicacion );}
 }
 
