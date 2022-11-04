@@ -63,7 +63,16 @@ public class Usuario {
         }
         return true;
     }
-
+    public static int getIndexUsuario(Usuario usuarioLogueado){
+        int index = 0;
+        for (Usuario usuario : usuarios) {
+            if (usuarioLogueado.getMail().equals(usuario.getMail())) {
+                return index;
+            }
+            index ++;
+        }
+        return -1;
+    }
 
     public static Usuario usuarioExiste(String email){
         for (Usuario usuario : usuarios) {
@@ -97,6 +106,7 @@ public class Usuario {
         return nickname;
     }
 
-    public void setNickname(){this.nickname = nickname; }
+    public void setNickname(String nickname){this.nickname = nickname; }
+
 }
 
