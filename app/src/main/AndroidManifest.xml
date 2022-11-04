@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.torino">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_torino_launcher"
@@ -17,6 +16,7 @@
         </activity>
         <activity android:name=".activities.InicioActivity">
         </activity>
+
         <activity android:name=".activities.FeedActivity"
             android:exported="true">
             <intent-filter>
@@ -25,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <activity android:name=".activities.CrearCuentaActivity"/>
         <activity android:name=".activities.CargarFragmentosActivity"/>

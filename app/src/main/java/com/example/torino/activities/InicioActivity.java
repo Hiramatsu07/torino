@@ -19,7 +19,7 @@ public class InicioActivity extends AppCompatActivity {
     private EditText campoPassword;
     Button login;
     TextView crear_cuenta;
-    Usuario usuarioLogueado;
+    Usuario usuariologueado, usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +41,9 @@ public class InicioActivity extends AppCompatActivity {
 
                 if (estaComprobado) {
                     Log.i(TAG, "Credenciales correctas");
-                    usuarioLogueado.setMail(email);
+                    usuariologueado = Usuario.usuarioExiste(email);
+                    Usuario.setUsuarioLogueado(usuariologueado);
 
-                    setUsuarioLogueado();
                     desplegarMensajeCredencialesCorrectas();
                     Intent intentFeed = new Intent( view.getContext(), CargarFragmentosActivity.class );
                     startActivity( intentFeed );

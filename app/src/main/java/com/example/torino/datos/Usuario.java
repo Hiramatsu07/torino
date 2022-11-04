@@ -72,7 +72,16 @@ public class Usuario {
         }
         return true;
     }
-
+    public static int getIndexUsuario(Usuario usuarioLogueado){
+        int index = 0;
+        for (Usuario usuario : usuarios) {
+            if (usuarioLogueado.getMail().equals(usuario.getMail())) {
+                return index;
+            }
+            index ++;
+        }
+        return -1;
+    }
 
     public static Usuario usuarioExiste(String email){
         for (Usuario usuario : usuarios) {
@@ -116,9 +125,6 @@ public class Usuario {
 
     public void setNickname(){this.nickname = nickname; }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
 
     public int getId() {
         return id;
@@ -135,5 +141,7 @@ public class Usuario {
     public void setPublicaciones(ArrayList<Publicacion> publicaciones) {
         this.publicaciones = publicaciones;
     }
+    public void setNickname(String nickname){this.nickname = nickname; }
+
 }
 
