@@ -4,12 +4,14 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.example.torino.R;
+import com.example.torino.datos.Usuario;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -48,21 +50,30 @@ public class ThirdFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-    public EditText edit_text_nombre;
-    public EditText edit_text_nickname;
+    private EditText edit_text_correo, edit_text_nickname;
+    String correo, nickname;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
+    }
+    String TAG = "ThirdFragment";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_third, container, false);
+
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        Usuario usuario = Usuario.getUsuarioLogueado();
+        correo= usuario.getMail();
+        nickname = usuario.getNickname();
+        Log.i(TAG, "CORREO: "+correo);
+        edit_text_correo = (EditText) getView().findViewById(R.id.edit_text_correo);
+        edit_text_correo.setText(correo);
+        edit_text_nickname = (EditText) getView().findViewById(R.id.edit_text_nickname);
+        edit_text_nickname.setText(nickname);
     }
 }

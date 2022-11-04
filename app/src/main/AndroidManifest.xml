@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.torino">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_torino_launcher"
@@ -21,7 +20,6 @@
         </activity>
         <activity android:name=".activities.InicioActivity">
         </activity>
-        <activity android:name=".activities.MainActivity"/>
         <activity android:name=".activities.FeedActivity"/>
         <activity android:name=".activities.CrearCuentaActivity"/>
         <activity android:name=".activities.CargarFragmentosActivity"/>
