@@ -8,7 +8,14 @@ public class Publicacion {
     private String texto;
     private int like;
     private int dislike;
+    public static ArrayList<Publicacion> publicacionesInicialesFicticias;
+    static {
+        publicacionesInicialesFicticias = new ArrayList<Publicacion>();
 
+        publicacionesInicialesFicticias.add( new Publicacion(0,Usuario.buscarUsuarioId(0), "Una publicacion x", 8, 3));
+        publicacionesInicialesFicticias.add( new Publicacion(1,Usuario.buscarUsuarioId(1), "Me siento re diva", 8, 3));
+        publicacionesInicialesFicticias.add( new Publicacion(2,Usuario.buscarUsuarioId(4), "Soy Batman", 8, 3));
+    }
 
 
     public Publicacion( int id , Usuario publicador , String texto , int like , int dislike ){
@@ -18,6 +25,7 @@ public class Publicacion {
         this.like = like;
         this.dislike = dislike;
     }
+
 
 
 
