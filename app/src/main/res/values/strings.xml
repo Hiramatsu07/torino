@@ -23,4 +23,7 @@
     <string name="titulo_nickname">Nickname</string>
     <string name="boton_guardar">GUARDAR</string>
 
+    <!-- Layout de Chats -->
+    <string name="titulo_chats">Chats</string>
+
 </resources>
