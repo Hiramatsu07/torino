@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.torino.R;
 import com.example.torino.datos.Usuario;
@@ -64,16 +66,46 @@ public class ThirdFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_third, container, false);
 
     }
+    Button guardar;
+    private EditText campoEmail;
+    private EditText campoNickname;
     @Override
     public void onStart() {
         super.onStart();
         Usuario usuario = Usuario.getUsuarioLogueado();
-        correo= usuario.getMail();
+        correo = usuario.getMail();
         nickname = usuario.getNickname();
         Log.i(TAG, "CORREO: "+correo);
         edit_text_correo = (EditText) getView().findViewById(R.id.edit_text_correo);
         edit_text_correo.setText(correo);
         edit_text_nickname = (EditText) getView().findViewById(R.id.edit_text_nickname);
         edit_text_nickname.setText(nickname);
+
+
+        guardar = getView().findViewById(R.id.button_guardar_cambios);
+        guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int index = Usuario.getIndexUsuario(Usuario.getUsuarioLogueado());
+                if (index != -1) {
+                    Usuario.usuarios.get(index).setMail(edit_text_correo.getText().toString());
+                    Usuario.usuarios.get(index).setNickname(edit_text_nickname.getText().toString());
+                    casoExitoso();
+                }else{
+                    casoNull();
+                }
+
+
+            }
+        });
+
+    }
+    public void casoExitoso() {
+        Toast.makeText(getActivity().getApplicationContext(), "Perfil actualizado", Toast.LENGTH_LONG)
+                .show();
+    }
+    public void casoNull() {
+        Toast.makeText(getActivity().getApplicationContext(), "Ha ocurrido un error inesperado", Toast.LENGTH_LONG)
+                .show();
     }
 }

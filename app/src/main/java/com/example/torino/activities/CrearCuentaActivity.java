@@ -18,10 +18,13 @@ public class CrearCuentaActivity extends AppCompatActivity {
     private EditText campoEmail;
     private EditText campoPassword;
     private EditText campoNickname;
+    private int campoId;
     Button crear_cuenta;
     TextView iniciar_sesion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        campoId = 4;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_cuenta);
         crear_cuenta = findViewById(R.id.button_crear_cuenta);
@@ -31,10 +34,12 @@ public class CrearCuentaActivity extends AppCompatActivity {
                 campoEmail = (EditText) findViewById(R.id.email);
                 campoPassword = (EditText) findViewById(R.id.password);
                 campoNickname = (EditText) findViewById(R.id.nickname);
+                campoId= campoId+1;
 
                 String email = campoEmail.getText().toString();
                 String password = campoPassword.getText().toString();
                 String nickname = campoNickname.getText().toString();
+                int id = campoId;
 
                 boolean yaExiste = Usuario.existeCuenta(email, nickname);
                 if (password.length() < 8) {
@@ -45,7 +50,7 @@ public class CrearCuentaActivity extends AppCompatActivity {
                     } else {
                         if (yaExiste == false) {
                             cuentaCreada();
-                            Usuario.usuarios.add(new Usuario(nickname, email, password ));
+                            Usuario.usuarios.add(new Usuario(nickname, email, password,id ));
                             finish();
                             Intent intentLogin = new Intent(view.getContext(), InicioActivity.class);
                             startActivity(intentLogin);
