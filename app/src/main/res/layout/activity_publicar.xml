@@ -4,15 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <FrameLayout
-        android:id="@+id/frame_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="35.06dp"
@@ -62,7 +53,7 @@
         android:text="Escribe lo que estas pensando"
         android:padding="10dp"
         android:textColor="#A3A3A3"
-        tools:background="#F4F4F4"
+        android:background="#F4F4F4"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="175dp" />

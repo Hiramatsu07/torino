@@ -2,6 +2,7 @@ package com.example.torino.fragments;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,9 +10,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.torino.R;
+import com.example.torino.activities.CargarFragmentosActivity;
+import com.example.torino.activities.PublicarActivity;
 import com.example.torino.adaptadores.FeedAdapter;
 import com.example.torino.datos.Publicacion;
 
@@ -78,5 +82,14 @@ public class FirstFragment extends Fragment {
         ListView listView = (ListView) getView().findViewById(R.id.lista_grupos_cercanos);
         FeedAdapter listAdapter = new FeedAdapter(getActivity(), Publicacion.publicacionesInicialesFicticias);
         listView.setAdapter(listAdapter);
+        Button publicar = getView().findViewById(R.id.button_publicar);
+        publicar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentPublicar = new Intent( view.getContext(), PublicarActivity.class );
+                startActivity( intentPublicar );
+            }
+        });
+
     }
 }
