@@ -1,5 +1,7 @@
 package com.example.torino.fragments;
 
+import android.app.Activity;
+import android.app.Application;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +9,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.example.torino.R;
+import com.example.torino.adaptadores.FeedAdapter;
+import com.example.torino.datos.Publicacion;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,7 +68,15 @@ public class FirstFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false);
+        View contentView = inflater.inflate(R.layout.fragment_first, container, false);
+        return contentView;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        ListView listView = (ListView) getView().findViewById(R.id.lista_grupos_cercanos);
+        FeedAdapter listAdapter = new FeedAdapter(getActivity(), Publicacion.publicacionesInicialesFicticias);
+        listView.setAdapter(listAdapter);
     }
 }

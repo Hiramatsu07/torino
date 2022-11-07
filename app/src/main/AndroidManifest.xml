@@ -12,20 +12,18 @@
 
         <activity android:name=".activities.LoginActivity"
             android:exported="true">
-
-        </activity>
-        <activity android:name=".activities.InicioActivity">
-        </activity>
-
-        <activity android:name=".activities.FeedActivity"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".activities.InicioActivity">
         </activity>
 
+        <activity android:name=".activities.FeedActivity">
+        </activity>
 
         <activity android:name=".activities.CrearCuentaActivity"/>
         <activity android:name=".activities.CargarFragmentosActivity"/>
