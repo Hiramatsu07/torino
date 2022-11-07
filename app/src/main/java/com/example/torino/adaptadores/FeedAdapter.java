@@ -14,6 +14,7 @@ import com.example.torino.datos.Publicacion;
 import com.example.torino.datos.Usuario;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FeedAdapter extends BaseAdapter {
     private final Activity actividad;
