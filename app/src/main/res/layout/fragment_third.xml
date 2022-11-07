@@ -121,7 +121,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/Button"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@drawable/boton_redondo"
