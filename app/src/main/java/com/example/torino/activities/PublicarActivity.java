@@ -16,8 +16,9 @@ public class PublicarActivity extends AppCompatActivity {
     Button publicar;
     EditText descripcion;
     Boolean resultado = false;
+
     @Override
-    protected void onCreate(Bundle savedInstanceStat){
+    protected void onCreate(Bundle savedInstanceStat) {
         setContentView(R.layout.activity_publicar);
         publicar = findViewById(R.id.button);
         publicar.setOnClickListener(new View.OnClickListener() {
@@ -25,9 +26,9 @@ public class PublicarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 descripcion = (EditText) findViewById(R.id.publicacion_usuario);
                 resultado = Publicacion.addNuevaPublicacion(descripcion.getText().toString());
-                if (resultado == true){
+                if (resultado == true) {
                     publicadoExitosamente();
-                }else{
+                } else {
                     errorInesperado();
                 }
             }
@@ -35,11 +36,14 @@ public class PublicarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceStat);
 
     }
+
     public void publicadoExitosamente() {
         Toast.makeText(getApplicationContext(), "Publicado correctamente", Toast.LENGTH_LONG)
                 .show();
     }
-    public void errorInesperado(){
+
+    public void errorInesperado() {
         Toast.makeText(getApplicationContext(), "Ocurrió un error inesperado", Toast.LENGTH_LONG)
                 .show();
+    }
 }
