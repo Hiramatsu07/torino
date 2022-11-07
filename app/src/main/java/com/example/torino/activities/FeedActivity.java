@@ -18,9 +18,9 @@ public class FeedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
-
+        Usuario unUsuario = Usuario.getUsuarioLogueado();
         ListView listView = findViewById(R.id.lista_grupos_cercanos);
-        listView.setAdapter(new FeedAdapter(this, Publicacion.publicacionesInicialesFicticias));
+        listView.setAdapter(new FeedAdapter(this, unUsuario.getFeed()));
 
     }
 }

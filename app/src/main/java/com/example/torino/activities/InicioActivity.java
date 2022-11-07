@@ -78,7 +78,7 @@ public class InicioActivity extends AppCompatActivity {
 
     private void setUsuarioLogueado() {
         String email = campoEmail.getText().toString();
-        Usuario.setUsuarioLogueado( Usuario.getUsuario( email ));
+        Usuario.setUsuarioLogueado(Usuario.getUsuario( email ));
     }
 
 }

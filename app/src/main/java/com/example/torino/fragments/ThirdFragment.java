@@ -52,8 +52,7 @@ public class ThirdFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-    private EditText edit_text_correo, edit_text_nickname;
-    String correo, nickname;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,15 +66,15 @@ public class ThirdFragment extends Fragment {
 
     }
     Button guardar;
-    private EditText campoEmail;
-    private EditText campoNickname;
+    private EditText edit_text_correo, edit_text_nickname;
+    String correo, nickname;
     @Override
     public void onStart() {
         super.onStart();
         Usuario usuario = Usuario.getUsuarioLogueado();
         correo = usuario.getMail();
-        nickname = usuario.getNickname();
         Log.i(TAG, "CORREO: "+correo);
+        nickname = usuario.getNickname();
         edit_text_correo = (EditText) getView().findViewById(R.id.edit_text_correo);
         edit_text_correo.setText(correo);
         edit_text_nickname = (EditText) getView().findViewById(R.id.edit_text_nickname);

@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class FeedAdapter extends BaseAdapter {
     private final Activity actividad;
     private final ArrayList<Publicacion> lista;
+
     String TAG ="FeedAdapter";
 
     public FeedAdapter(Activity actividad, ArrayList<Publicacion> lista){
@@ -29,6 +30,7 @@ public class FeedAdapter extends BaseAdapter {
     public View getView(int posicion,View vista, ViewGroup padre){
         LayoutInflater inflater = actividad.getLayoutInflater();
         View view = inflater.inflate(R.layout.elementos_list_feed,null,true);
+
 
 
         Publicacion publicacionMostrada =lista.get( posicion );
