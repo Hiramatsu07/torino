@@ -47,14 +47,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="12dp"
-
-
         />
 
-
-
-
-
-
-
+    <Button
+        android:id="@+id/button_publicar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/boton_redondo_negro"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/k2d_regular"
+        android:foregroundGravity="center_vertical"
+        android:text="@string/boton_nueva_publicacion"
+        android:textSize="34sp"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
