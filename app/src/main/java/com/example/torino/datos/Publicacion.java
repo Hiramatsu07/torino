@@ -26,7 +26,14 @@ public class Publicacion {
         this.dislike = dislike;
     }
 
-
+    public static boolean addNuevaPublicacion(String descripcion){
+        int id=0, like =0 , dislike=0;
+        for (Publicacion publicacion: publicacionesInicialesFicticias){
+            id = id+1;
+        }
+        publicacionesInicialesFicticias.add(new Publicacion(id,Usuario.getUsuarioLogueado(),descripcion,like, dislike));
+        return true;
+    }
 
 
     public int getId() { return id; }
