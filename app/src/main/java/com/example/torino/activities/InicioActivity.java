@@ -19,7 +19,7 @@ public class InicioActivity extends AppCompatActivity {
     private EditText campoPassword;
     Button login;
     TextView crear_cuenta;
-    Usuario usuariologueado, usuario;
+    Usuario usuariologueado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,11 +74,6 @@ public class InicioActivity extends AppCompatActivity {
     public void desplegarMensajeCredencialesCorrectas() {
         Toast.makeText(getApplicationContext(), "Sesión iniciada correctamente", Toast.LENGTH_SHORT)
                 .show();
-    }
-
-    private void setUsuarioLogueado() {
-        String email = campoEmail.getText().toString();
-        Usuario.setUsuarioLogueado( Usuario.getUsuario( email ));
     }
 
 }

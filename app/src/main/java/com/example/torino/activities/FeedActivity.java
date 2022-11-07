@@ -18,7 +18,6 @@ public class FeedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
-
         ListView listView = findViewById(R.id.lista_grupos_cercanos);
         listView.setAdapter(new FeedAdapter(this, Publicacion.publicacionesInicialesFicticias));
 

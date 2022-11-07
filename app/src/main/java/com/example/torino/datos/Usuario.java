@@ -1,5 +1,7 @@
 package com.example.torino.datos;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class Usuario {
@@ -46,6 +48,7 @@ public class Usuario {
 
     public static void setUsuarioLogueado(Usuario usuario) {
         usuarioLogueado = usuario;
+        Log.i("setUsuarioLogueado", "Usuario logueado: " + usuarioLogueado);
     }
 
     public static Usuario getUsuarioLogueado() {
@@ -87,8 +90,6 @@ public class Usuario {
         for (Usuario usuario : usuarios) {
             if (email.equals(usuario.getMail())){
                 return usuario;
-            } else {
-                return null;
             }
         }
         return null;

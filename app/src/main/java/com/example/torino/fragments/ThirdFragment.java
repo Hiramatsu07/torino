@@ -76,6 +76,7 @@ public class ThirdFragment extends Fragment {
         correo = usuario.getMail();
         nickname = usuario.getNickname();
         Log.i(TAG, "CORREO: "+correo);
+        Log.i(TAG, "NICKNAME: "+nickname);
         edit_text_correo = (EditText) getView().findViewById(R.id.edit_text_correo);
         edit_text_correo.setText(correo);
         edit_text_nickname = (EditText) getView().findViewById(R.id.edit_text_nickname);
