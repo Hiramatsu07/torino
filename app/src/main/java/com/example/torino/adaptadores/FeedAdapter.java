@@ -37,6 +37,9 @@ public class FeedAdapter extends BaseAdapter {
         Publicacion publicacionMostrada =lista.get( posicion );
         Usuario publicador = publicacionMostrada.getPublicador();
 
+        Log.i(TAG,"Publicacion mostrada "+publicacionMostrada.getTexto());
+        Log.i(TAG,"Publicador "+ publicador);
+
         TextView nickname = view.findViewById( R.id.textview );
         nickname.setText(publicador.getNickname());
 

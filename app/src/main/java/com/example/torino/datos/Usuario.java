@@ -15,6 +15,8 @@ public class Usuario {
     public ArrayList<Publicacion> publicaciones;
     public ArrayList<Usuario> amigos;
 
+    String TAG = "Usuario";
+
     static {
         usuarios = new ArrayList<>();
         usuarios.add(new Usuario("Batman", "h", "h",0));
@@ -24,6 +26,7 @@ public class Usuario {
 
         usuarios.get(1).getAmigos().add(usuarios.get(0));
         usuarios.get(0).getPublicaciones().add(new Publicacion(0,Usuario.buscarUsuarioId(0), "Una publicacion x", 8, 3));
+        usuarios.get(1).getPublicaciones().add(new Publicacion(1,Usuario.buscarUsuarioId(1), "Una publicacion x", 8, 3));
 
     }
 
@@ -144,8 +147,10 @@ public class Usuario {
         for(Usuario unAmigo : amigos){
             for (Publicacion unaPublicacion : unAmigo.publicaciones){
                 publicacionesFeed.add(unaPublicacion);
+                Log.i(TAG,"Texto de publicacion "+unaPublicacion.getTexto());
             }
         }
+
         return publicacionesFeed;
     }
 
