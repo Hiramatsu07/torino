@@ -7,14 +7,18 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.torino.R;
 import com.example.torino.activities.CargarFragmentosActivity;
+import com.example.torino.activities.ChatsActivity;
+import com.example.torino.activities.MensajeDirectoActivity;
 import com.example.torino.activities.PublicarActivity;
 import com.example.torino.adaptadores.FeedAdapter;
 import com.example.torino.datos.Publicacion;
@@ -90,6 +94,14 @@ public class FirstFragment extends Fragment {
                 startActivity( intentPublicar );
             }
         });
-
+        ImageView md = (ImageView) getView().findViewById(R.id.imageView2);
+        md.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), ChatsActivity.class);
+                Log.i("Abriendo Chats", "ALGO PASO");
+                startActivity(i);
+            }
+        });
     }
 }

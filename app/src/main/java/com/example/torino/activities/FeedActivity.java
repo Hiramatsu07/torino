@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,12 +23,5 @@ public class FeedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_feed);
         ListView listView = findViewById(R.id.lista_grupos_cercanos);
         listView.setAdapter(new FeedAdapter(this, Publicacion.publicacionesInicialesFicticias));
-
-    }
-
-    public void lanzarVistaChats(View view){
-        Intent i = new Intent(this, ChatsActivity.class);
-        Log.i("Abriendo Chats", "ALGO PASO");
-        startActivity(i);
     }
 }
