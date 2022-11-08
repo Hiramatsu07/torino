@@ -18,7 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.InicioActivity"/>
-        <activity android:name=".activities.FeedActivity"/>
         <activity android:name=".activities.CrearCuentaActivity"/>
         <activity android:name=".activities.CargarFragmentosActivity"/>
         <activity android:name=".activities.PublicarActivity"/>
