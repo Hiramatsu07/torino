@@ -24,4 +24,7 @@
     <string name="boton_guardar">GUARDAR</string>
     <string name="boton_nueva_publicacion">T</string>
 
+    <!-- Layout de Chats -->
+    <string name="titulo_chats">Chats</string>
+
 </resources>
