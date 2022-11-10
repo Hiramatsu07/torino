@@ -12,7 +12,7 @@ public class Chats {
 
         chatsInicialesFicticios.add( new Chats(0,Usuario.buscarUsuarioId(0), "Te mande algo"));
         chatsInicialesFicticios.add( new Chats(1,Usuario.buscarUsuarioId(1), "Quete"));
-        chatsInicialesFicticios.add( new Chats(2,Usuario.buscarUsuarioId(4), "porque soy intolerante al gluten"));
+        chatsInicialesFicticios.add( new Chats(2,Usuario.buscarUsuarioId(3), "porque soy intolerante al gluten"));
     }
 
 

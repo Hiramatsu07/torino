@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Notificacion {
     private String fecha;
-    private int useridseguidor;
+    private int userid;
     private String descripcion;
 
 
@@ -15,7 +15,7 @@ public class Notificacion {
     public static ArrayList<Notificacion> notificaciones = new ArrayList<>();
 
     public Notificacion(int userid, String fecha, String descripcion) {
-        this.useridseguidor = userid;
+        this.userid = userid;
         this.fecha = fecha;
         this.descripcion = descripcion;
     }
@@ -27,11 +27,11 @@ public class Notificacion {
     }
 
     public int getUseridseguidor() {
-        return useridseguidor;
+        return userid;
     }
 
-    public void setUseridseguidor(int useridseguidor) {
-        this.useridseguidor = useridseguidor;
+    public void setUseridseguidor(int userid) {
+        this.userid = userid;
     }
 
     public String getFecha() {

@@ -34,7 +34,7 @@ public class NotificacionAdaptador extends BaseAdapter{
 
        Notificacion notificacion = lista.get(posicion);
        TextView nickname = view.findViewById(R.id.nickname);
-       nickname.setText(notificacion.getUseridseguidor());
+       nickname.setText(String.valueOf(notificacion.getUseridseguidor()) );
 
        TextView descripcion = view.findViewById(R.id.descripcion);
        descripcion.setText(notificacion.getDescripcion());

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class ChatAdapter extends BaseAdapter {
     private final Activity actividad;
     private final ArrayList<Chats> lista;
-    String TAG ="FeedAdapter";
+    String TAG ="ChatAdapter";
 
     public ChatAdapter(Activity actividad, ArrayList<Chats> lista){
         this.actividad = actividad;
@@ -35,6 +35,7 @@ public class ChatAdapter extends BaseAdapter {
         Usuario mensajero = chatsMostrada.getMensajero();
 
         TextView nickname = view.findViewById( R.id.textview );
+        Log.i(TAG, mensajero.getNickname());
         nickname.setText(mensajero.getNickname());
 
         int idRecursoImag = 0;
