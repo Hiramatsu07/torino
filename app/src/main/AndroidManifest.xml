@@ -14,18 +14,15 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".activities.InicioActivity">
-        </activity>
-
-        <activity android:name=".activities.FeedActivity">
-        </activity>
-
+        <activity android:name=".activities.InicioActivity"/>
         <activity android:name=".activities.CrearCuentaActivity"/>
         <activity android:name=".activities.CargarFragmentosActivity"/>
+        <activity android:name=".activities.PublicarActivity"/>
+        <activity android:name =".activities.ChatsActivity"/>
+        <activity android:name =".activities.NotificacionesActivity" />
+
     </application>
 </manifest>
