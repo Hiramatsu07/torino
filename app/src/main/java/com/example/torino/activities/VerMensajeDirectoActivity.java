@@ -2,6 +2,8 @@ package com.example.torino.activities;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,8 @@ public class VerMensajeDirectoActivity extends AppCompatActivity {
     private Chats unChat;
     private TextView nombre;
     private TextView estado;
+    private ImageView imagenUsuario;
+    private int imgSeleccionada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,5 +47,20 @@ public class VerMensajeDirectoActivity extends AppCompatActivity {
 
         estado = (TextView) findViewById(R.id.estado_usuario_mensaje_directo);
         estado.setText(unChat.getEstado());
+
+        imagenUsuario = (ImageView) findViewById(R.id.imageview1);
+
+        if(idChat==0){
+            imgSeleccionada=R.drawable.ch;
+        }else if(idChat==1){
+            imgSeleccionada=R.drawable.cha;
+        }else if(idChat==2){
+            imgSeleccionada=R.drawable.chica;
+        } else {
+            imgSeleccionada=R.drawable.cha;
+        }
+        imagenUsuario.setBackgroundResource(imgSeleccionada);
+
+
     }
 }
