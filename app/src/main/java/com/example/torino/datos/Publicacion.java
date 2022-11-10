@@ -15,6 +15,7 @@ public class Publicacion {
         publicacionesInicialesFicticias.add( new Publicacion(0,Usuario.buscarUsuarioId(1), "Una publicacion x", 8, 3));
         publicacionesInicialesFicticias.add( new Publicacion(1,Usuario.buscarUsuarioId(2), "Me siento re diva", 8, 3));
         publicacionesInicialesFicticias.add( new Publicacion(2,Usuario.buscarUsuarioId(0), "Soy Batman", 8, 3));
+        publicacionesInicialesFicticias.add(new Publicacion(3,Usuario.buscarUsuarioId(4),"Buenas",6,3));
     }
 
 
