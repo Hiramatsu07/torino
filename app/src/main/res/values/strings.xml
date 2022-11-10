@@ -27,4 +27,7 @@
     <!-- Layout de Chats -->
     <string name="titulo_chats">Chats</string>
 
+    <!-- Layout del notificaciones -->
+    <string name="titulo_notificaciones"> Notificaciones </string>
+
 </resources>

@@ -19,6 +19,7 @@ import com.example.torino.R;
 import com.example.torino.activities.CargarFragmentosActivity;
 import com.example.torino.activities.ChatsActivity;
 import com.example.torino.activities.MensajeDirectoActivity;
+import com.example.torino.activities.NotificacionesActivity;
 import com.example.torino.activities.PublicarActivity;
 import com.example.torino.adaptadores.FeedAdapter;
 import com.example.torino.datos.Publicacion;
@@ -101,6 +102,15 @@ public class FirstFragment extends Fragment {
             public void onClick(View view) {
                 Intent i = new Intent(view.getContext(), ChatsActivity.class);
                 Log.i("Abriendo Chats", "ALGO PASO");
+                startActivity(i);
+            }
+        });
+        ImageView noti = (ImageView) getView().findViewById(R.id.imageView3);
+        noti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), NotificacionesActivity.class);
+                Log.i("Abriendo Notificaciones", "ALGO PASO");
                 startActivity(i);
             }
         });
