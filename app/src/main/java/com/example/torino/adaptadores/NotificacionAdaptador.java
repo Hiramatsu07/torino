@@ -15,7 +15,7 @@ import com.example.torino.datos.Usuario;
 
 import java.util.ArrayList;
 
-public class NotificacionAdaptador extends BaseAdapter {
+public class NotificacionAdaptador extends BaseAdapter{
 
     private final Activity actividad;
     private final ArrayList<Notificacion> lista;
