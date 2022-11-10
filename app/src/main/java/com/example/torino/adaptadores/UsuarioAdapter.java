@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.torino.R;
 import com.example.torino.datos.Usuario;
@@ -40,9 +42,32 @@ public class UsuarioAdapter extends BaseAdapter {
         TextView nicknameUsuario = view.findViewById(R.id.tv_nombre_usuario);
         nicknameUsuario.setText(unUsuario.getNickname());
 
+        Button seguir;
+        seguir = view.findViewById(R.id.button_seguir);
+        seguir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean resp = Usuario.setNuevoSeguido(nicknameUsuario.getText().toString());
+                if (resp == false){
+                    errorInesperado();
+                }else{
+                    seguidoExitosamente();
+                }
+            }
+        });
+
         return view;
     }
 
+    public void seguidoExitosamente() {
+        Toast.makeText(actividad.getApplicationContext(), "Usuario seguido", Toast.LENGTH_LONG)
+                .show();
+    }
+
+    public void errorInesperado() {
+        Toast.makeText(actividad.getApplicationContext(), "Ocurrió un error inesperado", Toast.LENGTH_LONG)
+                .show();
+    }
     @Override
     public int getCount() {
         return lista.size();

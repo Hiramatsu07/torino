@@ -29,5 +29,26 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/button_seguir"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/redondear_boton"
+        android:fontFamily="@font/k2d_regular"
+        android:paddingLeft="3dp"
+        android:paddingTop="0dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="0dp"
+        android:text="Seguir"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:backgroundTint="#7D0707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
