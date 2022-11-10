@@ -33,13 +33,14 @@ public class NotificacionAdaptador extends BaseAdapter{
        View view = inflater.inflate(R.layout.elementos_notificacion, null, true);
 
        Notificacion notificacion = lista.get(posicion);
+       Usuario seguidor = notificacion.getSeguidor();
        TextView nickname = view.findViewById(R.id.nickname);
-       nickname.setText(notificacion.getUseridseguidor());
+       nickname.setText(seguidor.getNickname());
 
        TextView descripcion = view.findViewById(R.id.descripcion);
        descripcion.setText(notificacion.getDescripcion());
 
-       int idUs = 0;
+       int idUs = seguidor.getId();
        int idRecursoImag = 0;
 
         ImageView fotoPerfil = view.findViewById(R.id.imageView1);
@@ -72,8 +73,8 @@ public class NotificacionAdaptador extends BaseAdapter{
 
     @Override
     public long getItemId(int arg0) {
-        Notificacion notificacion = lista.get(arg0);
-        return notificacion.getUseridseguidor();
+        Notificacion unaNotificacion = lista.get(arg0);
+        return unaNotificacion.getId();
     }
 
 
