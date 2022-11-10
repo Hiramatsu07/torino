@@ -36,6 +36,7 @@ public class UsuarioAdapter extends BaseAdapter {
 
 
         Usuario unUsuario = lista.get(posicion);
+
         TextView nicknameUsuario = view.findViewById(R.id.tv_nombre_usuario);
         nicknameUsuario.setText(unUsuario.getNickname());
 
