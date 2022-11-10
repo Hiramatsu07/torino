@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.SearchView;
 
 import com.example.torino.R;
+import com.example.torino.adaptadores.UsuarioAdapter;
 import com.example.torino.datos.Usuario;
 
 /**

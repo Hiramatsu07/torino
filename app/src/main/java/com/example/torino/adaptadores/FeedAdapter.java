@@ -69,7 +69,6 @@ public class FeedAdapter extends BaseAdapter {
         TextView texto = view.findViewById(R.id.textview3);
         texto.setText(publicacionMostrada.getTexto());
         Log.i(TAG,"nickname"+publicador.getNickname());
-
         return view;
     }
 
