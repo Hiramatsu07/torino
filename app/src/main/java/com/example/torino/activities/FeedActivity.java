@@ -3,6 +3,7 @@ package com.example.torino.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -24,4 +25,5 @@ public class FeedActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.lista_grupos_cercanos);
         listView.setAdapter(new FeedAdapter(this, Publicacion.publicacionesInicialesFicticias));
     }
+
 }

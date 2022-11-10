@@ -130,6 +130,4 @@
             android:src="@drawable/camara"
             android:tint="#000000" />
     </RelativeLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
