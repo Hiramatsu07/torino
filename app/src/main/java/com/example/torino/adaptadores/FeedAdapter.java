@@ -48,23 +48,28 @@ public class FeedAdapter extends BaseAdapter {
 
 
         ImageView fotoPerfil = view.findViewById(R.id.imageview1);
-        if(idUs==0){
+        if(idUs==1){
             idRecursoImag=R.drawable.ch;
-        }else if(idUs==1){
-            idRecursoImag=R.drawable.cha;
         }else if(idUs==2){
+            idRecursoImag=R.drawable.cha;
+        }else if(idUs==3){
             idRecursoImag=R.drawable.chica;
-        }else{
-            idRecursoImag=R.drawable.foto_perfil;
+        }else if(idUs==0 && idUs>3){
+            idRecursoImag=R.drawable.usuario;
         }
         fotoPerfil.setImageResource(idRecursoImag);
 
 
+        TextView like = view.findViewById(R.id.textview5);
+        like.setText(String.valueOf(publicacionMostrada.getLike()));
 
+        TextView dislike = view.findViewById(R.id.textview4);
+        dislike.setText(String.valueOf(publicacionMostrada.getDislike()));
 
         TextView texto = view.findViewById(R.id.textview3);
         texto.setText(publicacionMostrada.getTexto());
         Log.i(TAG,"nickname"+publicador.getNickname());
+
         return view;
     }
 
