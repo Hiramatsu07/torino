@@ -6,31 +6,51 @@ import java.util.Date;
 
 
 public class Notificacion {
+    private int id;
     private String fecha;
-    private int userid;
+    private Usuario seguidor;
     private String descripcion;
+
 
 
     public static ArrayList<Notificacion> notificaciones = new ArrayList<>();
 
-    public Notificacion(int userid, String fecha, String descripcion) {
-        this.userid = userid;
+
+    public Notificacion(int id,Usuario user, String fecha, String descripcion) {
+        this.id = id;
+        this.seguidor = user;
         this.fecha = fecha;
         this.descripcion = descripcion;
     }
 
     static {
-        notificaciones.add(new Notificacion(0, "05/20/2022", "Te siguió"));
-        notificaciones.add(new Notificacion(1, "06/20/2022", "Le gusto tu publicacion"));
-        notificaciones.add(new Notificacion(2, "07/20/2022", "Te siguió"));
+        notificaciones.add(new Notificacion(0, Usuario.buscarUsuarioId(0),"05/20/2022", "Te siguió"));
+        notificaciones.add(new Notificacion(1, Usuario.buscarUsuarioId(1),"06/20/2022", "Le gusto tu publicacion"));
+        notificaciones.add(new Notificacion(2, Usuario.buscarUsuarioId(2),"07/20/2022", "Te siguió"));
     }
 
-    public int getUseridseguidor() {
-        return userid;
+    public int getId() {
+        return id;
     }
 
-    public void setUseridseguidor(int userid) {
-        this.userid = userid;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public static ArrayList<Notificacion> getNotificaciones() {
+        return notificaciones;
+    }
+
+    public static void setNotificaciones(ArrayList<Notificacion> notificaciones) {
+        Notificacion.notificaciones = notificaciones;
+    }
+
+    public Usuario getSeguidor() {
+        return seguidor;
+    }
+
+    public void setSeguidor(Usuario userSeguidor) {
+        this.seguidor = userSeguidor;
     }
 
     public String getFecha() {
@@ -48,9 +68,4 @@ public class Notificacion {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
-    public int getId() {
-        return userid;
-    }
 }
-
