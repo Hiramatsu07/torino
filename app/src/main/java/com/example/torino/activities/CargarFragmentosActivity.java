@@ -10,13 +10,13 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.torino.R;
 import com.example.torino.fragments.FirstFragment;
-import com.example.torino.fragments.SecondFragment;
+import com.example.torino.fragments.BuscarUsuarioFragment;
 import com.example.torino.fragments.ThirdFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class CargarFragmentosActivity extends AppCompatActivity {
     FirstFragment firstFragment = new FirstFragment();
-    SecondFragment secondFragment = new SecondFragment();
+    BuscarUsuarioFragment secondFragment = new BuscarUsuarioFragment();
     ThirdFragment thirdFragment = new ThirdFragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
