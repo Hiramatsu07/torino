@@ -7,8 +7,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffffff">
+        android:layout_height="90dp"
+        android:background="#ffffff"
+        tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageview"
@@ -32,7 +33,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/textview"
+            android:id="@+id/nombre_usuario"
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
@@ -45,23 +46,23 @@
         </TextView>
 
         <TextView
-            android:id="@+id/textview2"
+            android:id="@+id/not_idea"
             android:layout_width="140dp"
             android:layout_height="30dp"
-            android:layout_below="@+id/textview"
+            android:layout_below="@+id/nombre_usuario"
             android:layout_marginLeft="75dp"
             android:layout_marginTop="13dp"
-            android:layout_toRightOf="@+id/textview"
+            android:layout_toRightOf="@+id/nombre_usuario"
             android:text=""
             android:textSize="12dp">
 
         </TextView>
 
         <TextView
-            android:id="@+id/textview3"
+            android:id="@+id/mensaje_del_usuario"
             android:layout_width="140dp"
             android:layout_height="30dp"
-            android:layout_below="@+id/textview"
+            android:layout_below="@+id/nombre_usuario"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/imageview"

@@ -1,7 +1,5 @@
 package com.example.torino.fragments;
 
-import android.app.Activity;
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,17 +14,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.torino.R;
-import com.example.torino.activities.CargarFragmentosActivity;
 import com.example.torino.activities.ChatsActivity;
-import com.example.torino.activities.MensajeDirectoActivity;
 import com.example.torino.activities.NotificacionesActivity;
 import com.example.torino.activities.PublicarActivity;
 import com.example.torino.adaptadores.FeedAdapter;
-import com.example.torino.datos.Publicacion;
 import com.example.torino.datos.Usuario;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.

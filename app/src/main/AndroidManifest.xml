@@ -22,6 +22,7 @@
         <activity android:name=".activities.CargarFragmentosActivity"/>
         <activity android:name=".activities.PublicarActivity"/>
         <activity android:name =".activities.ChatsActivity"/>
+        <activity android:name =".activities.VerMensajeDirectoActivity"/>
         <activity android:name =".activities.NotificacionesActivity" />
 
     </application>

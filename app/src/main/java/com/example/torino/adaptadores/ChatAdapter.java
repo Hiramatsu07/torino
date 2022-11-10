@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class ChatAdapter extends BaseAdapter {
     private final Activity actividad;
     private final ArrayList<Chats> lista;
-    String TAG ="FeedAdapter";
+    String TAG ="ChatAdapter";
 
     public ChatAdapter(Activity actividad, ArrayList<Chats> lista){
         this.actividad = actividad;
@@ -31,10 +31,10 @@ public class ChatAdapter extends BaseAdapter {
         View view = inflater.inflate(R.layout.elementos_list_chat,null,true);
 
 
-        Chats chatsMostrada =lista.get( posicion );
+        Chats chatsMostrada = lista.get( posicion );
         Usuario mensajero = chatsMostrada.getMensajero();
 
-        TextView nickname = view.findViewById( R.id.textview );
+        TextView nickname = view.findViewById( R.id.nombre_usuario );
         nickname.setText(mensajero.getNickname());
 
         int idRecursoImag = 0;
@@ -56,8 +56,8 @@ public class ChatAdapter extends BaseAdapter {
 
 
 
-        TextView texto = view.findViewById(R.id.textview3);
-        texto.setText(chatsMostrada.getTexto());
+        TextView texto = view.findViewById(R.id.mensaje_del_usuario);
+        texto.setText(chatsMostrada.getEstado());
         Log.i(TAG,"nickname"+mensajero.getNickname());
         return view;
     }

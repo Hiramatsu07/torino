@@ -5,24 +5,22 @@ import java.util.ArrayList;
 public class Chats {
     private int id;
     private Usuario mensajero;
-    private String texto;
+    private String estado;
     public static ArrayList<Chats> chatsInicialesFicticios;
     static {
         chatsInicialesFicticios = new ArrayList<Chats>();
 
-        chatsInicialesFicticios.add( new Chats(0,Usuario.buscarUsuarioId(0), "Te mande algo"));
-        chatsInicialesFicticios.add( new Chats(1,Usuario.buscarUsuarioId(1), "Quete"));
-        chatsInicialesFicticios.add( new Chats(2,Usuario.buscarUsuarioId(3), "porque soy intolerante al gluten"));
+        chatsInicialesFicticios.add( new Chats(0,Usuario.buscarUsuarioId(0), "Conectado"));
+        chatsInicialesFicticios.add( new Chats(1,Usuario.buscarUsuarioId(1), "Conectado"));
+        chatsInicialesFicticios.add( new Chats(2,Usuario.buscarUsuarioId(3), "Conectado"));
     }
 
 
-    public Chats(int id , Usuario mensajero , String texto){
+    public Chats(int id , Usuario mensajero , String estado){
         this.id = id;
         this.mensajero = mensajero;
-        this.texto = texto;
+        this.estado = estado;
     }
-
-
 
 
     public int getId() { return id; }
@@ -33,7 +31,7 @@ public class Chats {
 
     public void setMensajero(Usuario mensajero) { this.mensajero = mensajero; }
 
-    public String getTexto() { return texto; }
+    public String getEstado() { return estado; }
 
-    public void setTexto(String texto) { this.texto = texto; }
+    public void setEstado(String estado) { this.estado = estado; }
 }
