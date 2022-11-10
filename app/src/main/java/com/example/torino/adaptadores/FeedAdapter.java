@@ -66,10 +66,11 @@ public class FeedAdapter extends BaseAdapter {
         TextView dislike = view.findViewById(R.id.textview4);
         dislike.setText(String.valueOf(publicacionMostrada.getDislike()));
 
+
+
         TextView texto = view.findViewById(R.id.textview3);
         texto.setText(publicacionMostrada.getTexto());
         Log.i(TAG,"nickname"+publicador.getNickname());
-
         return view;
     }
 

@@ -5,9 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.torino.R;
 import com.example.torino.datos.Usuario;
@@ -36,9 +34,9 @@ public class UsuarioAdapter extends BaseAdapter {
         LayoutInflater inflater = actividad.getLayoutInflater();
         View view = inflater.inflate( R.layout.elemento_usuarios, null, true);
 
-        //TODO obtener vistas correspondientes a un elemento y asignarle valor
 
         Usuario unUsuario = lista.get(posicion);
+
         TextView nicknameUsuario = view.findViewById(R.id.tv_nombre_usuario);
         nicknameUsuario.setText(unUsuario.getNickname());
 
@@ -56,18 +54,25 @@ public class UsuarioAdapter extends BaseAdapter {
             }
         });
 
+        int idRecursoImag = 0;
+        int idUs = unUsuario.getId();
+
+        ImageView fotoPerfil = view.findViewById(R.id.foto_perfil);
+        Log.i("UsuarioAdapter","El usuario es: "+idUs);
+        if(idUs==0){
+            idRecursoImag=R.drawable.ch;
+        }else if(idUs==1){
+            idRecursoImag=R.drawable.cha;
+        }else if(idUs==2){
+            idRecursoImag=R.drawable.chica;
+        }else{
+            idRecursoImag=R.drawable.foto_perfil;
+        }
+        fotoPerfil.setImageResource(idRecursoImag);
+
         return view;
     }
 
-    public void seguidoExitosamente() {
-        Toast.makeText(actividad.getApplicationContext(), "Usuario seguido", Toast.LENGTH_LONG)
-                .show();
-    }
-
-    public void errorInesperado() {
-        Toast.makeText(actividad.getApplicationContext(), "Ocurrió un error inesperado", Toast.LENGTH_LONG)
-                .show();
-    }
     @Override
     public int getCount() {
         return lista.size();
