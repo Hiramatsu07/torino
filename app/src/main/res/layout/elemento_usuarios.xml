@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <ImageView
+        android:id="@+id/foto_perfil"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/chica" />
+
+    <TextView
+        android:id="@+id/tv_nombre_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="Nombre usuario"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintStart_toEndOf="@+id/foto_perfil"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_seguir"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/redondear_boton"
+        android:fontFamily="@font/k2d_regular"
+        android:paddingLeft="3dp"
+        android:paddingTop="0dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="0dp"
+        android:text="Seguir"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:backgroundTint="#7D0707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

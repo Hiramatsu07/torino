@@ -1,21 +1,49 @@
 package com.example.torino.datos;
 
+import android.os.Bundle;
 import android.util.Log;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class Usuario {
+import com.example.torino.R;
+import com.example.torino.adaptadores.UsuarioAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Usuario extends AppCompatActivity {
     private String nickname;
     private String mail;
     private String password;
     private int id;
 
     private static Usuario usuarioLogueado;
-    public static final ArrayList<Usuario> usuarios;
+    //public static final ArrayList<Usuario> usuarios;
     public ArrayList<Publicacion> publicaciones;
     public ArrayList<Usuario> amigos;
 
+    private RecyclerView recyclerView;
+    private UsuarioAdapter lista;
+    private List<Usuario> usuarioList;
+
+    @Override
+    protected void onCreate (Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_buscar_usuarios);
+
+
+        recyclerView = findViewById(R.id.search_bar);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        usuarioList = new ArrayList<>();
+    }
+
+
     String TAG = "Usuario";
+
+    public static ArrayList<Usuario> usuarios = new ArrayList<>();
 
     static {
         usuarios = new ArrayList<>();
@@ -23,6 +51,13 @@ public class Usuario {
         usuarios.add(new Usuario("Artur","artur","1",1));
         usuarios.add(new Usuario("Pilar","pili","1",2));
         usuarios.add(new Usuario("Milagros","mili","1",3));
+        usuarios.add(new Usuario("Mariana", "mari", "h",4));
+        usuarios.add(new Usuario("Belen","belu","1",5));
+        usuarios.add(new Usuario("Jimena","jime","1",6));
+        usuarios.add(new Usuario("Daniela","dani","1",7));
+        usuarios.add(new Usuario("Ignacio", "inaki", "h",8));
+        usuarios.add(new Usuario("Jorge","negro","1",9));
+
 
         usuarios.get(1).getAmigos().add(usuarios.get(0));
         usuarios.get(0).getPublicaciones().add(new Publicacion(0,Usuario.buscarUsuarioId(0), "Una publicacion x", 8, 3));
@@ -171,5 +206,21 @@ public class Usuario {
     }
     public void setNickname(String nickname){this.nickname = nickname; }
 
+    public static boolean setNuevoSeguido(String nickname){
+        String TAG="Usuarios ciclados";
+            for (Usuario amigo : usuarioLogueado.amigos){
+                Log.i(TAG, "amigo: "+amigo.getNickname());
+                if(amigo.getNickname().equals(nickname)){
+                    return false;
+                }
+            }
+        for (Usuario usuario : usuarios){
+            if(usuario.getNickname().equals(nickname)){
+                usuarioLogueado.amigos.add(usuario);
+                return true;
+            }
+        }
+        return false;
+    }
 }
 

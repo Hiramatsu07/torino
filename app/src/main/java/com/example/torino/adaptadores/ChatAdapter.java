@@ -43,14 +43,14 @@ public class ChatAdapter extends BaseAdapter {
 
 
         ImageView fotoPerfil = view.findViewById(R.id.imageview1);
-        if(idUs==0){
+        if(idUs==1){
             idRecursoImag=R.drawable.ch;
-        }else if(idUs==1){
-            idRecursoImag=R.drawable.cha;
         }else if(idUs==2){
+            idRecursoImag=R.drawable.cha;
+        }else if(idUs==3){
             idRecursoImag=R.drawable.chica;
-        }else{
-            idRecursoImag=R.drawable.foto_perfil;
+        }else if(idUs==0 && idUs>3){
+            idRecursoImag=R.drawable.usuario;
         }
         fotoPerfil.setImageResource(idRecursoImag);
 

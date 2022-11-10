@@ -9,15 +9,17 @@ public class Notificacion {
     private String fecha;
     private int userid;
     private String descripcion;
+    private Usuario seguidor;
 
 
 
     public static ArrayList<Notificacion> notificaciones = new ArrayList<>();
 
-    public Notificacion(int userid, String fecha, String descripcion) {
+    public Notificacion(int userid, Usuario user, String fecha, String descripcion) {
         this.userid = userid;
         this.fecha = fecha;
         this.descripcion = descripcion;
+        this.seguidor = user;
     }
 
     static {
