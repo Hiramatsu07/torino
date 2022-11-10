@@ -108,13 +108,12 @@ public class UsuarioAdapter extends BaseAdapter {
     }
 
     public void errorInesperado() {
-        Toast.makeText(actividad.getApplicationContext(), "Ha ocurrido un error inesperoado", Toast.LENGTH_LONG)
+        Toast.makeText(actividad.getApplicationContext(), "Ha ocurrido un error inesperado", Toast.LENGTH_LONG)
                 .show();
     }
 
     public void seguidoExitosamente() {
         Toast.makeText(actividad.getApplicationContext(), "Usuario seguido", Toast.LENGTH_LONG)
                 .show();
-
     }
 }
