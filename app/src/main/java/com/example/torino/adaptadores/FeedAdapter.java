@@ -19,6 +19,7 @@ import java.util.List;
 public class FeedAdapter extends BaseAdapter {
     private final Activity actividad;
     private final ArrayList<Publicacion> lista;
+
     String TAG ="FeedAdapter";
 
     public FeedAdapter(Activity actividad, ArrayList<Publicacion> lista){
@@ -32,8 +33,12 @@ public class FeedAdapter extends BaseAdapter {
         View view = inflater.inflate(R.layout.elementos_list_feed,null,true);
 
 
+
         Publicacion publicacionMostrada =lista.get( posicion );
         Usuario publicador = publicacionMostrada.getPublicador();
+
+        Log.i(TAG,"Publicacion mostrada "+publicacionMostrada.getTexto());
+        Log.i(TAG,"Publicador "+ publicador);
 
         TextView nickname = view.findViewById( R.id.textview );
         nickname.setText(publicador.getNickname());

@@ -28,4 +28,7 @@
     <string name="titulo_chats">Chats</string>
     <string name="publicar">Publicar</string>
 
+    <!-- Layout del notificaciones -->
+    <string name="titulo_notificaciones"> Notificaciones </string>
+
 </resources>

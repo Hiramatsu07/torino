@@ -24,7 +24,7 @@ public class InicioActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate: Inicia la creacion de la ctividad");
+        Log.d(TAG, "onCreate: Inicia la creacion de la actividad");
         setContentView(R.layout.activity_inicio);
         login = findViewById(R.id.button_login);
         login.setOnClickListener(new View.OnClickListener() {

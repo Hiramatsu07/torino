@@ -20,9 +20,11 @@ import com.example.torino.R;
 import com.example.torino.activities.CargarFragmentosActivity;
 import com.example.torino.activities.ChatsActivity;
 import com.example.torino.activities.MensajeDirectoActivity;
+import com.example.torino.activities.NotificacionesActivity;
 import com.example.torino.activities.PublicarActivity;
 import com.example.torino.adaptadores.FeedAdapter;
 import com.example.torino.datos.Publicacion;
+import com.example.torino.datos.Usuario;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,8 +86,8 @@ public class FirstFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        ListView listView = (ListView) getView().findViewById(R.id.lista_grupos_cercanos);
-        FeedAdapter listAdapter = new FeedAdapter(getActivity(), Publicacion.publicacionesInicialesFicticias);
+        ListView listView = (ListView) getView().findViewById(R.id.lista_publicaciones);
+        FeedAdapter listAdapter = new FeedAdapter(getActivity(), Usuario.getUsuarioLogueado().getFeed());
         listView.setAdapter(listAdapter);
         Button publicar = getView().findViewById(R.id.button_publicar);
         publicar.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +103,15 @@ public class FirstFragment extends Fragment {
             public void onClick(View view) {
                 Intent i = new Intent(view.getContext(), ChatsActivity.class);
                 Log.i("Abriendo Chats", "ALGO PASO");
+                startActivity(i);
+            }
+        });
+        ImageView noti = (ImageView) getView().findViewById(R.id.imageView3);
+        noti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), NotificacionesActivity.class);
+                Log.i("Abriendo Notificaciones", "ALGO PASO");
                 startActivity(i);
             }
         });

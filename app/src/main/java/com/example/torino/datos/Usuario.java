@@ -13,13 +13,20 @@ public class Usuario {
     private static Usuario usuarioLogueado;
     public static final ArrayList<Usuario> usuarios;
     public ArrayList<Publicacion> publicaciones;
+    public ArrayList<Usuario> amigos;
+
+    String TAG = "Usuario";
 
     static {
         usuarios = new ArrayList<>();
-        usuarios.add(new Usuario("Batman", "h", "h",4));
-        usuarios.add(new Usuario("Artur","artur","1",0));
-        usuarios.add(new Usuario("Pilar","pili","1",1));
-        usuarios.add(new Usuario("Milagros","mili","1",2));
+        usuarios.add(new Usuario("Batman", "h", "h",0));
+        usuarios.add(new Usuario("Artur","artur","1",1));
+        usuarios.add(new Usuario("Pilar","pili","1",2));
+        usuarios.add(new Usuario("Milagros","mili","1",3));
+
+        usuarios.get(1).getAmigos().add(usuarios.get(0));
+        usuarios.get(0).getPublicaciones().add(new Publicacion(0,Usuario.buscarUsuarioId(0), "Una publicacion x", 8, 3));
+        usuarios.get(1).getPublicaciones().add(new Publicacion(1,Usuario.buscarUsuarioId(1), "Una publicacion x", 8, 3));
 
     }
 
@@ -29,7 +36,7 @@ public class Usuario {
         this.password = password;
         this.id = id;
         this.publicaciones = new ArrayList<>();
-
+        this.amigos = new ArrayList<>();
     }
 
     public static boolean comprobarCredenciales(String email, String password) {
@@ -133,6 +140,26 @@ public class Usuario {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public  ArrayList<Publicacion> getFeed(){
+        ArrayList<Publicacion> publicacionesFeed = new ArrayList<>();
+        for(Usuario unAmigo : amigos){
+            for (Publicacion unaPublicacion : unAmigo.publicaciones){
+                publicacionesFeed.add(unaPublicacion);
+                Log.i(TAG,"Texto de publicacion "+unaPublicacion.getTexto());
+            }
+        }
+
+        return publicacionesFeed;
+    }
+
+    public ArrayList<Usuario> getAmigos() {
+        return amigos;
+    }
+
+    public void setAmigos(ArrayList<Usuario> amigos) {
+        this.amigos = amigos;
     }
 
     public ArrayList<Publicacion> getPublicaciones() {

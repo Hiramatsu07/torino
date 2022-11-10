@@ -42,7 +42,7 @@
         android:layout_marginTop="6dp" />
 
     <ListView
-        android:id="@+id/lista_grupos_cercanos"
+        android:id="@+id/lista_publicaciones_feed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/imageView"
