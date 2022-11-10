@@ -45,11 +45,11 @@ public class ChatAdapter extends BaseAdapter {
         if(idUs==0){
             idRecursoImag=R.drawable.ch;
         }else if(idUs==1){
-            idRecursoImag=R.drawable.cha;
+            idRecursoImag=R.drawable.foto_perfil;
         }else if(idUs==2){
             idRecursoImag=R.drawable.chica;
         }else{
-            idRecursoImag=R.drawable.foto_perfil;
+            idRecursoImag=R.drawable.cha;
         }
         fotoPerfil.setImageResource(idRecursoImag);
 

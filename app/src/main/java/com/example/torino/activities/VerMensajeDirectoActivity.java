@@ -53,11 +53,11 @@ public class VerMensajeDirectoActivity extends AppCompatActivity {
         if(idChat==0){
             imgSeleccionada=R.drawable.ch;
         }else if(idChat==1){
-            imgSeleccionada=R.drawable.cha;
+            imgSeleccionada=R.drawable.foto_perfil;
         }else if(idChat==2){
-            imgSeleccionada=R.drawable.chica;
-        } else {
             imgSeleccionada=R.drawable.cha;
+        } else {
+            imgSeleccionada=R.drawable.chica;
         }
         imagenUsuario.setBackgroundResource(imgSeleccionada);
 
