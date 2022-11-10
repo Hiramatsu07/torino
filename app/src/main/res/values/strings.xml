@@ -26,5 +26,6 @@
 
     <!-- Layout de Chats -->
     <string name="titulo_chats">Chats</string>
+    <string name="publicar">Publicar</string>
 
 </resources>

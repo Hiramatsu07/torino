@@ -11,15 +11,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.torino.R;
 import com.example.torino.datos.Publicacion;
+import com.example.torino.datos.Usuario;
+
+import org.w3c.dom.Text;
 
 public class PublicarActivity extends AppCompatActivity {
     Button publicar;
     EditText descripcion;
     Boolean resultado = false;
+    TextView username;
 
     @Override
     protected void onCreate(Bundle savedInstanceStat) {
         setContentView(R.layout.activity_publicar);
+        username = (TextView) findViewById(R.id.user_name);
+        username.setText(Usuario.getUsuarioLogueado().getNickname().toString());
         publicar = findViewById(R.id.button);
         publicar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +34,7 @@ public class PublicarActivity extends AppCompatActivity {
                 resultado = Publicacion.addNuevaPublicacion(descripcion.getText().toString());
                 if (resultado == true) {
                     publicadoExitosamente();
+                    finish();
                 } else {
                     errorInesperado();
                 }
