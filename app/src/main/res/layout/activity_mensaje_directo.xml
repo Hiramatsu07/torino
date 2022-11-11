@@ -5,9 +5,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ListView
+        android:id="@+id/lista_mensajes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/mensaje_del_usuario_a_enviar"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#F4F4F4"
+        android:fontFamily="@font/k2d_regular"
+        android:textColor="#A3A3A3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mensajear_background_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#7D0707"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imagen_mensajear"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/mensaje_del_usuario"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mandar_mensaje">
+
+        </ImageView>
+
+
+    </androidx.cardview.widget.CardView>
+
     <ImageView
         android:id="@+id/left_arrow"
-        android:layout_width="35dp"
+        android:layout_width="32dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
