@@ -1,11 +1,16 @@
 package com.example.torino.fragments;
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.torino.R;
+import com.example.torino.activities.CargarFragmentosActivity;
 import com.example.torino.activities.ChatsActivity;
 import com.example.torino.activities.NotificacionesActivity;
 import com.example.torino.activities.PublicarActivity;

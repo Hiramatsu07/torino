@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="35.06dp"
@@ -12,6 +14,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         app:srcCompat="@drawable/logo_torino" />
 
     <Button
@@ -21,19 +24,20 @@
         android:layout_marginTop="14dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/redondear_boton"
+        android:backgroundTint="#7D0707"
         android:fontFamily="@font/k2d_regular"
         android:paddingLeft="3dp"
         android:paddingTop="0dp"
         android:paddingRight="3dp"
         android:paddingBottom="0dp"
-        android:text="Publicar"
+        android:text="@string/publicar"
         android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="12dp"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:backgroundTint="#7D0707"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/user_name"
@@ -43,18 +47,22 @@
         android:layout_marginTop="140dp"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
         android:id="@+id/publicacion_usuario"
         android:layout_width="343dp"
         android:layout_height="454dp"
-        android:fontFamily="@font/k2d_regular"
-        android:text="Escribe lo que estas pensando"
-        android:padding="10dp"
-        android:textColor="#A3A3A3"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="108dp"
         android:background="#F4F4F4"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="175dp" />
+        android:fontFamily="@font/k2d_regular"
+        android:padding="10dp"
+        android:text="Escribe lo que estas pensando"
+        android:textColor="#A3A3A3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

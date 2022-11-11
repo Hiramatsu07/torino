@@ -33,10 +33,7 @@
                 android:layout_height="60dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ch"
-                >
-
-
-            </ImageView>
+                />
         </androidx.cardview.widget.CardView>
 
 

@@ -35,6 +35,7 @@ public class ChatAdapter extends BaseAdapter {
         Usuario mensajero = chatsMostrada.getMensajero();
 
         TextView nickname = view.findViewById( R.id.nombre_usuario );
+        Log.i(TAG, mensajero.getNickname());
         nickname.setText(mensajero.getNickname());
 
         int idRecursoImag = 0;
@@ -49,7 +50,7 @@ public class ChatAdapter extends BaseAdapter {
         }else if(idUs==2){
             idRecursoImag=R.drawable.chica;
         }else{
-            idRecursoImag=R.drawable.cha;
+            idRecursoImag=R.drawable.foto_perfil;
         }
         fotoPerfil.setImageResource(idRecursoImag);
 

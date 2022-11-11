@@ -15,6 +15,7 @@ public class Notificacion {
 
     public static ArrayList<Notificacion> notificaciones = new ArrayList<>();
 
+
     public Notificacion(int id,Usuario user, String fecha, String descripcion) {
         this.id = id;
         this.seguidor = user;

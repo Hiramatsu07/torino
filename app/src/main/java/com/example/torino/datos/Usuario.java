@@ -206,5 +206,34 @@ public class Usuario extends AppCompatActivity {
     }
     public void setNickname(String nickname){this.nickname = nickname; }
 
+    public static boolean setNuevoSeguido(String nickname){
+        String TAG="Usuarios ciclados";
+            for (Usuario amigo : usuarioLogueado.amigos){
+                Log.i(TAG, "amigo: "+amigo.getNickname());
+                if(amigo.getNickname().equals(nickname)){
+                    return false;
+                }
+            }
+        for (Usuario usuario : usuarios){
+            if(usuario.getNickname().equals(nickname)){
+                usuarioLogueado.amigos.add(usuario);
+                return true;
+            }
+        }
+        return false;
+    }
+    public static ArrayList verNoAmigos(){
+        ArrayList <Usuario> noAmigos = new ArrayList<>();
+        for (Usuario usuarioAmigo : usuarioLogueado.amigos) {
+            int idUs = usuarioAmigo.getId();
+                for (Usuario usuario : usuarios) {
+                    if (usuario.getId()!=idUs) {
+                        noAmigos.add(usuario);
+                    }
+                }
+        }
+        return noAmigos;
+    }
 }
+
 
