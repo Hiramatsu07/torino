@@ -37,9 +37,10 @@ public class UsuarioAdapter extends BaseAdapter {
     public View getView(int posicion, View vista, ViewGroup padre) {
         LayoutInflater inflater = actividad.getLayoutInflater();
         View view = inflater.inflate(R.layout.elemento_usuarios, null, true);
-
-
-        Usuario unUsuario = lista.get(posicion);
+        Usuario unUsuario;
+        unUsuario= lista.get(posicion);
+        //ArrayList <Usuario> usuariosFiltrados = unUsuario.verNoAmigos();
+        //unUsuario = usuariosFiltrados.get(posicion);
 
         TextView nicknameUsuario = view.findViewById(R.id.tv_nombre_usuario);
         nicknameUsuario.setText(unUsuario.getNickname());

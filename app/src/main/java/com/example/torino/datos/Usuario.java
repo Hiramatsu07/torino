@@ -222,5 +222,18 @@ public class Usuario extends AppCompatActivity {
         }
         return false;
     }
+    public static ArrayList verNoAmigos(){
+        ArrayList <Usuario> noAmigos = new ArrayList<>();
+        for (Usuario usuarioAmigo : usuarioLogueado.amigos) {
+            int idUs = usuarioAmigo.getId();
+                for (Usuario usuario : usuarios) {
+                    if (usuario.getId()!=idUs) {
+                        noAmigos.add(usuario);
+                    }
+                }
+        }
+        return noAmigos;
+    }
 }
+
 
